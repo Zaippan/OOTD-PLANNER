@@ -59,7 +59,7 @@ func main() {
 }
 
 func menu() {
-	fmt.Println("===== Menu OOTD Planner =====")
+	fmt.Println("\n===== Menu OOTD Planner =====")
 	fmt.Println("1. Tambah Fashion")
 	fmt.Println("2. Ubah Fashion")
 	fmt.Println("3. Hapus Fashion")
