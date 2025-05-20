@@ -13,9 +13,8 @@ type Outfit struct {
 
 type tabInt [NMAX]Outfit
 
-var A tabInt
-
 func main() {
+	var A tabInt
 	var jumlahoutfit int
 	var pilihan int
 	var pilihanopsi2 int
