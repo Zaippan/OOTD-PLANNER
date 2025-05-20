@@ -11,10 +11,10 @@ type Outfit struct {
 	Kategori string
 }
 
-type tabInt [NMAX]Outfit
+type taboutfit [NMAX]Outfit
 
 func main() {
-	var A tabInt
+	var A taboutfit
 	var jumlahoutfit int
 	var pilihan int
 	var pilihanopsi2 int
@@ -59,7 +59,7 @@ func main() {
 }
 
 func menu() {
-	fmt.Println("\n===== Menu OOTD Planner =====")
+	fmt.Println("===== Menu OOTD Planner =====")
 	fmt.Println("1. Tambah Fashion")
 	fmt.Println("2. Ubah Fashion")
 	fmt.Println("3. Hapus Fashion")
@@ -67,7 +67,7 @@ func menu() {
 	fmt.Println("5. Keluar")
 }
 
-func bacaData(A *tabInt, jumlahData *int) {
+func bacaData(A *taboutfit, jumlahData *int) {
     if *jumlahData < NMAX {
         fmt.Print("Masukkan Baju: ")
         fmt.Scan(&A[*jumlahData].Baju)
@@ -84,7 +84,7 @@ func bacaData(A *tabInt, jumlahData *int) {
     }
 }
 
-func tampilData(A tabInt, n int) {
+func tampilData(A taboutfit, n int) {
 	var i int
 	fmt.Println("\nBerikut Outfit Anda:")
 	fmt.Printf("%-15s %-15s %-15s %-15s\n", "Baju", "Celana", "Sepatu", "Kategori")
@@ -92,24 +92,24 @@ func tampilData(A tabInt, n int) {
 		fmt.Printf("%-15s %-15s %-15s %-15s\n", A[i].Baju, A[i].Celana, A[i].Sepatu, A[i].Kategori)
 	}
 }
-func ubahSatuBagian(A *tabInt, n int) {
-	var cariBaju, cariCelana, cariSepatu, cariKategori string
+func ubahSatuBagian(A *taboutfit, n int) {
+	var cekbaju, cekcelana, ceksepatu, cekkate string
 	var idx, opsi, i int
 	idx = -1
 	for idx == -1 {
 		fmt.Println("Masukkan data lengkap yang ingin dicari:")
 		fmt.Print("Baju: ")
-		fmt.Scan(&cariBaju)
+		fmt.Scan(&cekbaju)
 		fmt.Print("Celana: ")
-		fmt.Scan(&cariCelana)
+		fmt.Scan(&cekcelana)
 		fmt.Print("Sepatu: ")
-		fmt.Scan(&cariSepatu)
+		fmt.Scan(&ceksepatu)
 		fmt.Print("Kategori: ")
-		fmt.Scan(&cariKategori)
+		fmt.Scan(&cekkate)
 
 		for i = 0; i < n; i++ {
-			if A[i].Baju == cariBaju && A[i].Celana == cariCelana &&
-				A[i].Sepatu == cariSepatu && A[i].Kategori == cariKategori && idx == -1 {
+			if A[i].Baju == cekbaju && A[i].Celana == cekcelana &&
+				A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
 				idx = i
 			}
 		}
@@ -140,23 +140,23 @@ func ubahSatuBagian(A *tabInt, n int) {
 		fmt.Println("Pilihan tidak valid.")
 	}
 }
-func ubahSeluruhBagian(A *tabInt, n int) {
-	var cariBaju, cariCelana, cariSepatu, cariKategori string
+func ubahSeluruhBagian(A *taboutfit, n int) {
+	var cekbaju, cekcelana, ceksepatu, cekkate string
 	var idx, i int
 	idx = -1
 	for idx == -1 {
 		fmt.Println("Masukkan data lengkap yang ingin diubah:")
 		fmt.Print("Baju: ")
-		fmt.Scan(&cariBaju)
+		fmt.Scan(&cekbaju)
 		fmt.Print("Celana: ")
-		fmt.Scan(&cariCelana)
+		fmt.Scan(&cekcelana)
 		fmt.Print("Sepatu: ")
-		fmt.Scan(&cariSepatu)
+		fmt.Scan(&ceksepatu)
 		fmt.Print("Kategori: ")
-		fmt.Scan(&cariKategori)
+		fmt.Scan(&cekkate)
 		for i = 0; i < n; i++ {
-			if A[i].Baju == cariBaju && A[i].Celana == cariCelana &&
-				A[i].Sepatu == cariSepatu && A[i].Kategori == cariKategori && idx == -1 {
+			if A[i].Baju == cekbaju && A[i].Celana == cekcelana &&
+				A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
 				idx = i
 			}
 		}
@@ -175,23 +175,23 @@ func ubahSeluruhBagian(A *tabInt, n int) {
 	fmt.Scan(&A[idx].Kategori)
 	fmt.Println("Data berhasil diubah.")
 }
-func hapusSeluruhOutfit(A *tabInt, n *int) {
-	var cariBaju, cariCelana, cariSepatu, cariKategori string
+func hapusSeluruhOutfit(A *taboutfit, n *int) {
+	var cekbaju, cekcelana, ceksepatu, cekkate string
 	var idx, i int
 	idx = -1
 	for idx == -1 {
 		fmt.Println("Masukkan data lengkap yang ingin dihapus:")
 		fmt.Print("Baju: ")
-		fmt.Scan(&cariBaju)
+		fmt.Scan(&cekbaju)
 		fmt.Print("Celana: ")
-		fmt.Scan(&cariCelana)
+		fmt.Scan(&cekcelana)
 		fmt.Print("Sepatu: ")
-		fmt.Scan(&cariSepatu)
+		fmt.Scan(&ceksepatu)
 		fmt.Print("Kategori: ")
-		fmt.Scan(&cariKategori)
+		fmt.Scan(&cekkate)
 		for i = 0; i < *n; i++ {
-			if A[i].Baju == cariBaju && A[i].Celana == cariCelana &&
-				A[i].Sepatu == cariSepatu && A[i].Kategori == cariKategori && idx == -1 {
+			if A[i].Baju == cekbaju && A[i].Celana == cekcelana &&
+				A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
 				idx = i
 			}
 		}
