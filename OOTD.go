@@ -106,10 +106,8 @@ func ubahSatuBagian(A *taboutfit, n int) {
 		fmt.Scan(&ceksepatu)
 		fmt.Print("Kategori: ")
 		fmt.Scan(&cekkate)
-
 		for i = 0; i < n; i++ {
-			if A[i].Baju == cekbaju && A[i].Celana == cekcelana &&
-				A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
+			if A[i].Baju == cekbaju && A[i].Celana == cekcelana && A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
 				idx = i
 			}
 		}
@@ -155,8 +153,7 @@ func ubahSeluruhBagian(A *taboutfit, n int) {
 		fmt.Print("Kategori: ")
 		fmt.Scan(&cekkate)
 		for i = 0; i < n; i++ {
-			if A[i].Baju == cekbaju && A[i].Celana == cekcelana &&
-				A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
+			if A[i].Baju == cekbaju && A[i].Celana == cekcelana && A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
 				idx = i
 			}
 		}
@@ -190,8 +187,7 @@ func hapusSeluruhOutfit(A *taboutfit, n *int) {
 		fmt.Print("Kategori: ")
 		fmt.Scan(&cekkate)
 		for i = 0; i < *n; i++ {
-			if A[i].Baju == cekbaju && A[i].Celana == cekcelana &&
-				A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
+			if A[i].Baju == cekbaju && A[i].Celana == cekcelana && A[i].Sepatu == ceksepatu && A[i].Kategori == cekkate && idx == -1 {
 				idx = i
 			}
 		}
