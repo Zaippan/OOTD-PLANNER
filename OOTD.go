@@ -170,7 +170,11 @@ func tampilOutfit(D taboutfit, n int) {
 	fmt.Println("\n===== Daftar Outfit =====")
 	fmt.Println("Tingkat Formalitas: (1 = Formal, 2 = Semi-Formal, 3 = Santai)")
 	for i = 0; i < n; i++ {
-		fmt.Printf("%s(%s)[%s]  %s(%s)[%s]  %s(%s)[%s]  Tingkat Formalitas = %d\n", D[i].baju, D[i].warnaBaju, D[i].kategoriBaju,D[i].celana, D[i].warnaCelana, D[i].kategoriCelana, D[i].sepatu, D[i].warnaSepatu, D[i].kategoriSepatu, D[i].tingkatFormalitas)
+		fmt.Printf("%s(%s)[%s]  %s(%s)[%s]  %s(%s)[%s]  Tingkat Formalitas = %d\n",
+			D[i].baju, D[i].warnaBaju, D[i].kategoriBaju,
+			D[i].celana, D[i].warnaCelana, D[i].kategoriCelana,
+			D[i].sepatu, D[i].warnaSepatu, D[i].kategoriSepatu,
+			D[i].tingkatFormalitas)
 	}
 }
 
@@ -220,7 +224,10 @@ func cariFashion(D taboutfit, n int, baju, warnaBaju, celana, warnaCelana, sepat
 	found = -1
 	i = 0
 	for i < n && found == -1 {
-		if D[i].baju == baju && D[i].warnaBaju == warnaBaju && D[i].kategoriBaju == kategoriBaju && D[i].celana == celana && D[i].warnaCelana == warnaCelana && D[i].kategoriCelana == kategoriCelana && D[i].sepatu == sepatu && D[i].warnaSepatu == warnaSepatu && D[i].kategoriSepatu == kategoriSepatu && D[i].tingkatFormalitas == tingkatFormalitas {
+		if D[i].baju == baju && D[i].warnaBaju == warnaBaju && D[i].kategoriBaju == kategoriBaju &&
+			D[i].celana == celana && D[i].warnaCelana == warnaCelana && D[i].kategoriCelana == kategoriCelana &&
+			D[i].sepatu == sepatu && D[i].warnaSepatu == warnaSepatu && D[i].kategoriSepatu == kategoriSepatu &&
+			D[i].tingkatFormalitas == tingkatFormalitas {
 			found = i
 		}
 		i++
@@ -894,13 +901,13 @@ func main() {
 				fmt.Print("Pilih: ")
 				fmt.Scan(&aksi)
 				if aksi == 1 {
-					fmt.Println("Baju: ")
-					fmt.Println("Celana: ")
-					fmt.Println("Sepatu: ")
+					fmt.Println("Baju: Polo")
+					fmt.Println("Celana: Chino")
+					fmt.Println("Sepatu: spitcat")
 				} else if aksi == 2{
-					fmt.Println("Baju: ")
-					fmt.Println("Celana: ")
-					fmt.Println("Sepatu: ")
+					fmt.Println("Baju: Sweeter")
+					fmt.Println("Celana: Levis")
+					fmt.Println("Sepatu: Samba")
 				} else {
 					fmt.Println("Tidak valid")
 				}
@@ -911,17 +918,17 @@ func main() {
 				fmt.Print("Pilih: ")
 				fmt.Scan(&aksi)
 				if aksi == 1 {
-					fmt.Println("Baju: ")
-					fmt.Println("Celana: ")
-					fmt.Println("Sepatu: ")
+					fmt.Println("Baju: Batik")
+					fmt.Println("Celana: Chino")
+					fmt.Println("Sepatu: Jordan")
 				} else if aksi == 2 {
-					fmt.Println("Baju: ")
-					fmt.Println("Celana: ")
-					fmt.Println("Sepatu: ")
+					fmt.Println("Baju: Kemeja")
+					fmt.Println("Celana: Chino")
+					fmt.Println("Sepatu: Pantopel")
 				} else if aksi == 3 {
-					fmt.Println("Baju: ")
-					fmt.Println("Celana: ")
-					fmt.Println("Sepatu: ")
+					fmt.Println("Baju: Kaos")
+					fmt.Println("Celana: Kargo")
+					fmt.Println("Sepatu: NewBeles")
 				} else {
 					fmt.Println("Data tidak valid")
 				}
